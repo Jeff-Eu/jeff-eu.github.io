@@ -1,0 +1,38 @@
+<div name="root_div">
+    <form name="root_form">
+        <div class="form-group">
+            <label class="control-label" for="focusedInput">Your name</label>
+            <input type="text" placeholder="Please type your name" ng-model="postt.name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label type="control-label" for="focusedInput">Meal name</label>
+            <input type="text" placeholder="Please type the meal name which you want to order" ng-model="postt.description" class="form-control" />
+        </div>
+        <div class="form-group" name="div_number">
+            <label type="control-label" for="focusedInput">Total price</label>
+            <input type="number" name="price" placeholder="Please type the total price for your meal" ng-model="postt.price" class="form-control" id="item_price" />
+
+        </div>
+        <!--<div class="form-group">-->
+        <!--    <label class="control-label" for="focusedInput">Post URL</label>-->
+        <!--    <input type="text" ng-model="post.url" class="form-control" />-->
+        <!--</div>-->
+        <br>
+        <button ng-click="savePost(postt)" class="btn btn-success btn-block">Summit ! </button>
+        <h4>* Don't delete the meal which others ordered. If you want you modify your order, remove yours and reorder again.</h4>
+        <div id="float_note"><span>Sum: </span><span class="summation">{{calculateSum()}}</span></div>
+    </form>
+</div>
+<div ng-repeat="post in posts">
+    <h2><a ng-href="{{post.url}}">{{post.name}}</a></h2>
+    <p><span>Meal: </span>{{post.description}}</p>
+    <p><span>Price: </span>${{post.price}}</p>
+    <button ng-click="deletePost(post)" class="btn btn-danger">Delete Post</button>
+    <!--<span>{{post.votes}}</span>-->
+    <!--<button ng-click="addVote(post)" class="btn btn-primary">Add Vote</button>-->
+    <!--<br>-->
+    <br>
+</div>
+<br>
+<!--<button class="btn btn-primary" ng-click="login()">Login with Twitter</button>-->
+<!--<span>Currently logged in as: {{authData.twitter.username}}</span>-->

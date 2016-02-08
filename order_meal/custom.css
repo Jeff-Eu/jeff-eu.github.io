@@ -1,0 +1,36 @@
+#float_note {
+	width: 10px;
+	height: 60px;
+	position: fixed;
+	border-width: 3px;
+	right: 0;
+	bottom: 30px;
+	padding: 9px;
+	border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 30px;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+    text-indent: 100%;
+}
+
+#float_note:hover {
+	width: 330px;
+	text-indent: initial;
+}
+
+
+#item_price.ng-invalid {
+    background-color:pink;
+}
+
+.summation {
+	color: red;
+}
+
+h2 > a:hover {
+	text-decoration: none;
+}
