@@ -95,6 +95,8 @@ app.controller('MainController', function($scope, $firebase, Posts, fbURL) {
         });
     }
 
+    
+
     $scope.calculateSum = function() {
         var sum = 0;
         for (i=0; i<Posts.length; i++) {
