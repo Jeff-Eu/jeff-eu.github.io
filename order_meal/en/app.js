@@ -92,10 +92,13 @@ app.controller('MainController', function($scope, $firebase, Posts, fbURL) {
             alert('Success');
             
             $scope.authData = authData;
-        });
+        }, {
+            remember: "none"
+      });
+
     }
 
-    
+
 
     $scope.calculateSum = function() {
         var sum = 0;
