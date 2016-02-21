@@ -1,0 +1,13 @@
+// firebase rule
+{
+  "rules": {
+
+            ".read": true,//"auth !== null"// && auth.provider === 'twitter'"
+            "orders": {
+             "$order_id": {
+              ".write": "auth !== null && 
+              (newData.child('uid').val() == auth.uid || data.child('uid').val() == auth.uid)"
+            }
+          }
+        }
+      }
