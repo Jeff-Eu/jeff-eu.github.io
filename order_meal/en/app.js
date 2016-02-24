@@ -57,7 +57,7 @@ app.controller('MainController', function($scope, $firebase, Posts, fbURL) {
     }
 
     $scope.deletePost = function(post) {
-       
+
        // for debugging
        var d = post.uid === $scope.authData.uid;
 
