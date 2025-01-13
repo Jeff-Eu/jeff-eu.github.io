@@ -62,4 +62,13 @@
     margin-left: 15px;
     margin-bottom: 5px;
     margin-top: 5px;
+    line-height: 1.4em;
+}
+
+.project-section b {
+    font-weight: bold;
+}
+
+.project-section .indent {
+    margin-left: 20px;
 }
