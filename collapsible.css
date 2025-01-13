@@ -37,7 +37,7 @@
 }
 
 .project-content {
-    padding: 0 18px;
+    padding: 5px 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -45,8 +45,21 @@
 }
 
 .project-section {
-    padding: 10px;
-    margin: 10px 0;
-    border-left: 3px solid #cf8a05;
-    background-color: #f9f9f9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px 0;
+    /* border-left: 3px solid #cf8a05; */
+    /* background-color: #f9f9f9; */
+}
+
+.project-section h4 {
+    font-size: 18px;
+    color: #1f853f;
+    margin-bottom: 6px;
+}
+
+.project-section ul li {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
