@@ -364,7 +364,7 @@ function toggleAllGroups() {
         var content = coll[i].nextElementSibling;
         if (isAllExpanded) {
             coll[i].classList.add("active");
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = (content.scrollHeight + 200) + "px";
         } else {
             coll[i].classList.remove("active");
             content.style.maxHeight = null;
@@ -380,7 +380,7 @@ for (var i = 0; i < coll.length; i++) {
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = (content.scrollHeight + 200) + "px";
         }
     });
 }
