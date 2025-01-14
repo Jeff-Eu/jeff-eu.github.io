@@ -328,7 +328,6 @@
 			<div class="sectionTitle">
 				<h1>Education</h1>
 			</div>
-			
 			<div class="sectionContent">
 				<article>
 					<h2>National Cheng Kung University</h2>
@@ -345,11 +344,10 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-				<section>
+		<section>
 			<div class="sectionTitle">
 				<h1>Certificate</h1>
 			</div>
-			
 			<div class="sectionContent">
 				<article>
 					<h2>Toeic Grade - 800</h2>
@@ -366,29 +364,40 @@
 </div>
 </body>
 <script>
-/*
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-73643533-1', 'auto');
-  ga('send', 'pageview');
-*/
-// Collapsible functionality
 var coll = document.getElementsByClassName("collapsible");
-var i;
+var isAllExpanded = false;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+function toggleAllGroups() {
+    isAllExpanded = !isAllExpanded;
+    for (var i = 0; i < coll.length; i++) {
+        var content = coll[i].nextElementSibling;
+        if (isAllExpanded) {
+            coll[i].classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            coll[i].classList.remove("active");
+            content.style.maxHeight = null;
+        }
     }
-  });
 }
+
+// Individual collapsible click handlers
+for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+
+// Add double-click handler to headshot
+document.getElementById("headshot").addEventListener("dblclick", toggleAllGroups);
+
+// Add cursor style to show it's clickable
+document.getElementById("headshot").style.cursor = "pointer";
 </script>
 </html>
