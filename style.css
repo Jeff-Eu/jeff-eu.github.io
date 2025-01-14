@@ -196,7 +196,7 @@ article {
 .company {
 	position: absolute;
 	right: 3px;
-	top: 0px;
+	top: 5px;
 }
 /*
 @media all and (min-width: 602px) and (max-width: 800px) {
