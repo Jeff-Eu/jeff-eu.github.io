@@ -71,7 +71,15 @@
 							<ul>
 								<li>Developed and maintained our diagnostic tools (ex, GPUTest, FanSpeedTest, LEDTest, etc) and automated scripts (ex, BetaPacker.ps) for the factory product line. Helped TPMs and ODMs to add new features, improved efficiency, and fixed issues with cooperating with USA and India teams. Sometimes it was relevant to our source code, sometimes we need to prove issues come from external reasons, e.g., BIOS or Hardware issues.</li>
 								<li>Built Nuget libraries for cross-project references.</li>
-								<!-- <li>Use CMake to build Intel Graphics Control Library (IGCL) and integrate its functions to our GPUTest.</li> -->
+								<!-- 
+								* LEDTest:
+									* Use hpqwmi (like Windows WMI) and DeviceIO with hex values to control LEDs
+								* GPUTest:
+									* Improved the DirectX Shader algorithm for more stressing. Get information of the Nvidia Card through Nvidia library. 
+									* build Intel Graphics Control Library (IGCL) (w/ CMake & Visual Studio) and integrate its functions to our GPUTest.
+								* FanSpeedTest: 
+									* Visualize the complicated control flow. That simplified later work for implementing new functions.	 
+								-->
 							</ul>
 						</div>
 						<div class="project-section">
@@ -160,6 +168,11 @@
 								<li>Implemented a <a href="https://apps.microsoft.com/detail/9n938m0flzdl?amp%3Bgl=us&hl=en-US&gl=TW">Calendar plugin</a>, which supports events sync with third party calendars.</li>
 								<img class="project-image" src="images/ScreenPad_Calendar.png" alt="ScreenPad_Calendar.png" style="width: 70%;" />
 								<li>Localization support for other plugins.</li>
+								<!-- 
+								* 土法煉鋼刻 UI
+								* Use multi-threading to implement animation for scrolling Month calendar.
+								* Created a localization library for other plugins
+								-->
 							</ul>
 						</div>
 						<div class="project-section">
@@ -233,6 +246,9 @@
 							<h4>ASUS USB Charger Plus</h4>
 							<p class="subDetails">Skill: C++, WMI, Win32</p>
 							<div>Maintained the application for upgrade. Using debug tools to find any problem on hardware, software or driver.</div>
+							<!-- 
+							* Handle Windows S0, S1, S2, S3 scenarios by Windows Messaging API
+							-->
 						</div>
 						<div class="project-section">
 							<h4>Photo Album</h4>
