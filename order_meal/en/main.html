@@ -1,9 +1,13 @@
 <div name="root_div">
     <form name="root_form">
-        <div class="form-group">
+<!--         <div class="form-group">
             <label class="control-label" for="focusedInput">Your name</label>
             <input type="text" placeholder="Please type your name" ng-model="postt.name" class="form-control" />
-        </div>
+        </div> -->
+
+        <button class="btn btn-primary" ng-click="login()">Login with Twitter</button>
+        <span>Currently logged in as: {{authData.twitter.username}}</span>
+
         <div class="form-group">
             <label type="control-label" for="focusedInput">Meal name</label>
             <input type="text" placeholder="Please type the meal name which you want to order" ng-model="postt.description" class="form-control" />
@@ -21,10 +25,11 @@
         <button ng-click="savePost(postt)" class="btn btn-success btn-block">Summit ! </button>
         <h4>* Don't delete the meal which others ordered. If you want you modify your order, remove yours and reorder again.</h4>
         <div id="float_note"><span>Sum: </span><span class="summation">{{calculateSum()}}</span></div>
+        
     </form>
 </div>
 <div ng-repeat="post in posts">
-    <h2><a ng-href="{{post.url}}">{{post.name}}</a></h2>
+    <h2><a ng-href="">{{post.name}}</a></h2>
     <p><span>Meal: </span>{{post.description}}</p>
     <p><span>Price: </span>${{post.price}}</p>
     <button ng-click="deletePost(post)" class="btn btn-danger">Delete Post</button>
@@ -34,5 +39,3 @@
     <br>
 </div>
 <br>
-<!--<button class="btn btn-primary" ng-click="login()">Login with Twitter</button>-->
-<!--<span>Currently logged in as: {{authData.twitter.username}}</span>-->

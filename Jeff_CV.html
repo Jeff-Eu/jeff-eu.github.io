@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Jeff Tsai - Intro</title>
+
+	<meta name="viewport" content="width=device-width" />
+	<meta name="description" content="Jeff CV" />
+	<meta charset="UTF-8">
+
+	<link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="collapsible.css">
+
+	<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="top">
+	<div id="cv" class="instaFade">
+		<div class="mainDetails">
+			<div id="headshot" class="quickFade">
+				<img src="images/jeff_headshot_8.jpg" alt="Jeff Tsai" />
+			</div>
+			<div id="name">
+				<h1 class="quickFade delayTwo">Tsai You Hung (Jeff Tsai)</h1>
+				<h2 class="quickFade delayThree">Software Engineer</h2>
+				<a href="https://jeff-eu.github.io/Jeff_CV.html">https://jeff-eu.github.io/Jeff_CV.html</a>
+			</div>
+			<div id="contactDetails" class="quickFade delayFour">
+				<ul>
+					<li style="margin-top: 10px;">
+						<a href="https://github.com/jeff-eu" target="_blank">
+							<img src="images/Github-Dark.svg" alt="Jeff Tsai's Github" width="30px" height="30px" />
+						</a>
+					</li>
+					<!-- <li>
+					<a href="https://www.linkedin.com/in/jeffeu/" target="_blank">
+						<img src="images/LinkedIn.svg" alt="Jeff Tsai's LinkedIn" width="30px" height="30px" />
+					</a>
+				</li> -->
+					<li>
+						<a href="http://stackoverflow.com/users/1613961/jeff-t" target="_blank">
+							<img src="images/StackOverflow-Dark.svg" alt="Jeff Tsai's StackOverflow" width="30px"
+								height="30px" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="mainArea" class="quickFade delayFive">
+			<section>
+				<p style="padding: 0px 5px; padding-top: 10px">Jeff has extensive experience in software interface
+					design and development on Windows and Android platforms as well as the automation processes and
+					automated testing. Jeff effectively utilizes object-oriented programming, design patterns,
+					refactoring, and fundamental mathematical theories to improve program performance and simplify
+					complexity. "Diligent work, efficiency-driven, keeping up with the times, and treating others
+					sincerely" is a true reflection of his professional journey.</p>
+
+				<div class="sectionTitle">
+					<h1>Work Experience</h1>
+				</div>
+
+				<div class="sectionContent">
+					<article>
+						<a href="http://www.asus.com/us/" target="_blank"><img class="company"
+								src="images/asus_new_s.png" alt="asus.png"></img></a>
+						<h2>ASUS</h2>
+						<h3>Senior Software Engineer</h3>
+						<p class="subDetails">Mar. 10th 2025 - present</p>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4>ASUS Systematic Test</h4>
+								<p class="subDetails">Skill: HyperV, WSL, Docker, gRPC, Python, Robot Framework,
+									PowerShell, Registry, GitLab CI/CD</p>
+								<ul>
+									<li>Implement an auto-test method in client-server architecture for testing our
+										target machines.</li>
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>Asus Settings (with ExpertLumi)</h4>
+								<p class="subDetails">Skill: C#, WinUI 3, MVVM, GitLab CI/CD</p>
+								<ul>
+									<li>Develop a WinUI 3 app which controls several lighting effects in our new models.
+									</li>
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>AsusBusinessServiceUtility</h4>
+								<p class="subDetails">Skill: C++, CMake, Gitlab CI/CD, Windows Service</p>
+								<ul>
+									<li>Follow new EU Policy to implement the archiving and compression of collected
+										(uploaded) user
+										data.
+									</li>
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>gRPC Library</h4>
+								<p class="subDetails">Skill: gRPC, C#, Windows Service, Gitlab CI/CD</p>
+								<ul>
+									<li>Establish a C# library which encapsulates C++ gRPC streaming calls for several
+										Apps usage.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+					<article>
+						<a href="https://www.boldtek.com/" target="_blank"><img class="company"
+								src="images/hp_boldtek.png" alt="hp_boldtek.jpg"></img></a>
+						<h2>BoldTek (for HP)</h2>
+						<h3>Technical Developer Factory Diagnostics</h3>
+						<p class="subDetails">May. 30th 2022 - Dec. 26th 2024</p>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4>Diagnostic exes and Java Tool</h4>
+								<p class="subDetails">Skill: C++, RW, WMI, CMake, C#, Azure CI/CD, Nuget packages, Java,
+									Github, PowerShell, JIRA, Github Copilot</p>
+								<ul>
+									<li>Developed and maintained our diagnostic tools (ex, GPUTest, FanSpeedTest,
+										LEDTest, etc) and automated scripts (ex, BetaPacker.ps) for the factory product
+										line. Helped TPMs and ODMs to add new features, improved efficiency, and fixed
+										issues with cooperating with USA and India teams. Sometimes it was relevant to
+										our source code, sometimes we need to prove issues come from external reasons,
+										e.g., BIOS or Hardware issues.</li>
+									<li>Built Nuget libraries for cross-project references.</li>
+									<!-- 
+								* LEDTest:
+									* Use hpqwmi (like Windows WMI) and DeviceIO with hex values to control LEDs
+								* GPUTest:
+									* Improved the DirectX Shader algorithm for more stressing. Get information of the Nvidia Card through Nvidia library. 
+									* build Intel Graphics Control Library (IGCL) (w/ CMake & Visual Studio) and integrate its functions to our GPUTest.
+								* FanSpeedTest: 
+									* Visualize the complicated control flow. That simplified later work for implementing new functions.	 
+								-->
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>Python Helpful tools</h4>
+								<p class="subDetails">Skill: Python, Azure Pipelines</p>
+								<ul>
+									<li>The <b>VersionScript.py</b> is used for improving our pipeline process for
+										updating exe's version numbers, which can avoid typos and save 66 (Cpp diags) *
+										40 (mins) from manual programming on each file.
+									</li>
+									<li><b>Code Cleaner tool</b></li>
+									<ul class="indent">
+										<li>Created a tool which can find and fix incorrect conversion from Tab to
+											Space.</li>
+										<li>Used to tidy up our Todo-comments. Keeping any Todo-comment linked to an
+											JIRA Issue ID, otherwise removing the messy Todo-comments.</li>
+									</ul>
+									<li>The <b>Auto Changelog Appender</b> is to append same new logs to all projects.
+										It is specially useful when library changes. For handling 100+ projects, the
+										time saver tool is developers' sweet.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+					<article>
+						<a href="https://www.optoma.com/tw/" target="_blank"><img class="company"
+								src="images/optoma.png" alt="optoma.png"></img></a>
+						<h2>Optoma Corporation</h2>
+						<h3>Senior Software Engineer</h3>
+						<p class="subDetails">Jun. 15th 2021 - May. 27th 2022</p>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4>Android Application for IFP</h4>
+								<p class="subDetails">Skill: macOS (Unix-based), Kotlin, Java, MVVM, DataBinding, Room,
+									Coroutines, Retrofit, GitLab</p>
+								<ul>
+									<li>Improved the old structure by Clean Code. Improved UX design by discussing with
+										designers.</li>
+									<li>Improved the performance significantly regarding the data synchronization.</li>
+									<li>Developed a lasso function for precise selection.</li>
+									<li>Coached team the correct knowledge about 2D graphic programming.</li>
+									<li>Incorporated auto check of coding style for team to improve cooperation.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+					<article>
+						<a href="https://viewsonicglobal.com/" target="_blank"><img class="company"
+								src="images/viewsonic.png" alt="viewsonic.png"></img></a>
+						<h2>ViewSonic</h2>
+						<h3>Senior Software Engineer</h3>
+						<p class="subDetails">Oct. 8th 2018 - Dec. 29th 2020</p>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4><a
+										href="https://play.google.com/store/apps/details?id=com.viewsonic.droid&hl=en&gl=US">myViewBoard
+										Whiteboard</a></h4>
+								<p class="subDetails">Skill: Java, Kotlin, Android SDK, WebRTC</p>
+								<img class="project-image" src="images/myViewBoard Whiteboard.png"
+									alt="myViewBoard Whiteboard.png" style="width: 70%;" />
+								<ul>
+									<li>Vector drawing / vector eraser infrastructure ( OOP, Drawing, Linear Algebra,
+										Geometry )</li>
+									<li>Embedded web browser which supports Multiple tabs / Screenshot / Drawing</li>
+									<li>Google / Microsoft sign-in / out ( through MQTT )</li>
+									<li>Support Proxy Authentication</li>
+									<li>Copy / Paste by Content Provider</li>
+									<li>Screen Casting ( through MQTT and WebRTC )</li>
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4><a
+										href="https://play.google.com/store/apps/details?id=com.mvbcast.crosswalk&hl=en&gl=US&pli=1">myViewBoard
+										Display</a></h4>
+								<p class="subDetails">Skill: Java, Kotlin, Android SDK, WebRTC</p>
+								<ul>
+									<li>Used WebRTC to make the P2P streaming.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+					<article>
+						<a href="http://www.asus.com/us/" target="_blank"><img class="company" src="images/asus.png"
+								alt="asus.png"></img></a>
+						<h2>ASUS</h2>
+						<h3>Team leader</h3>
+						<p class="subDetails">Aug. 5th 2012 - Oct. 4th 2018</p>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4>ASUS DualScreen (POC)</h4>
+								<p class="subDetails">Skill: C++, Win32, C#, UWP, DAC</p>
+								<ul>
+									<li>Hook Win32 events to create new features on the second screen of laptop.</li>
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4><a href="https://www.youtube.com/watch?v=KJad8isxMsQ">ASUS ScreenPad™</a></h4>
+								<p class="subDetails">Skill: C++, Win32, UWP, DAC</p>
+								<ul>
+									<li>Implemented a <a
+											href="https://apps.microsoft.com/detail/9n938m0flzdl?amp%3Bgl=us&hl=en-US&gl=TW">Calendar
+											plugin</a>, which supports events sync with third party calendars.</li>
+									<img class="project-image" src="images/ScreenPad_Calendar.png"
+										alt="ScreenPad_Calendar.png" style="width: 70%;" />
+									<li>Localization support for other plugins.</li>
+									<!-- 
+								* 土法煉鋼刻 UI
+								* Use multi-threading to implement animation for scrolling Month calendar.
+								* Created a localization library for other plugins
+								-->
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>ZenMotion library</h4>
+								<p class="subDetails">Skill: C++, Android JNI, Java</p>
+								<ul>
+									<li>Encapsulated new algorithm on JNI.</li>
+									<li>Designed and developed an app for testing the new algorithm.</li>
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>Android Fitness Tracker (POC)</h4>
+								<p class="subDetails">Skill: Java, Android SDK, SQLite</p>
+								<div>With Android watch and handheld device, the app can help users to track his/her
+									activities like walk, run, push-up, sit-up and so on. What I designed and
+									implemented are,</div>
+								<ul>
+									<li>Synchronize data between the watch and the handheld through Bluetooth by
+										multiple threading.</li>
+									<li>Save / retrieve persistent data to / from SQLite.</li>
+									<li>UI/UX of watch.</li>
+									<img class="project-image" src="images/fitness_tracker.png"
+										alt="fitness_tracker.png" style="width: 70%;" />
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>ASUS GiftBox</h4>
+								<p class="subDetails">Skill: RWD, Bootstrap, html/css, javascript, ASP.net MVC, IIS 7.5,
+									Entity Framework, Linq to SQL, JSON, C#, SQL server, AppFabric ( for Cache server ),
+									Google Analytics and its API</p>
+								<div>ASUS GiftBox is a web based system, which provides software promotion to clients.
+									I'm responsible for maintaining and developing the frontend and backend of the ASUS
+									GiftBox website.</div>
+								<div><b>Contribution</b>: Help ASUS to earn cash flow from more than 380,000 user clicks
+									on the promotion apps.
+									Several sub tasks I developed are listed below.</div>
+								<ul>
+									<li>Backend: When getting the request from the frontend app, I queried data from
+										database and then sent JSON data to the app.</li>
+									<li>ASUS GiftBox Website v1 (frontend)</li>
+									<img class="project-image" src="images/GiftBox_v1.gif" alt="GiftBox_v1.gif"
+										style="width: 90%;" />
+									<li>ASUS GiftBox Website v2 (frontend)</li>
+									<img class="project-image" src="images/GiftBox_v2.png" alt="GiftBox_v2.png"
+										style="width: 70%;" />
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4>GameVisual</h4>
+								<p class="subDetails">Skill: C#, WPF, MVVM</p>
+								<div>It only took me 5 days to implement the HD and 4K UI of the application.</div>
+								<img class="project-image" src="images/GameVisual.gif" alt="GameVisual.gif"
+									style="width: 90%;" />
+							</div>
+							<div class="project-section">
+								<h4>Health Platform (POC)</h4>
+								<p class="subDetails">Skill: Java, Android SDK, SQLite</p>
+								<div>The Health Platform app helps users to measure their heart rate, step count and
+									sleep quality. I implemented UI and integrated several body measurement algorithms
+									into the app.</div>
+								<img class="project-image" src="images/HealthPlatform.jpg" alt="HealthPlatform.jpg"
+									style="width: 100%;" />
+							</div>
+							<div class="project-section">
+								<h4>Email Newsletter for Adobe</h4>
+								<p class="subDetails">Skill: Dreamweaver, Html, inline-css, C# and Excel API</p>
+								<div>Developed an email newsletter app for Adobe. The app helps Adobe to send email
+									newsletters to their clients.</div>
+								<div><b>Contribution</b>: Asus had a cooperation plan with Adobe. The email newsletter
+									encourages ASUS clients to buy Adobe products with promotion, which made ASUS earn
+									more than USD $3300 income.</div>
+							</div>
+							<div class="project-section">
+								<h4>ASUS Gap Measuring</h4>
+								<p class="subDetails">Skill: WPF, C#, OpenCV, C/C++, Registry, JSON, XML, INI files,
+									Software anti-piracy</p>
+								<div>Designed and developed a tool used for measuring the gap distance on ASUS laptops
+									in the factory.</div>
+								<img class="project-image" src="images/Gap_Measuring.jpg" alt="Gap_Measuring.png"
+									style="width: 90%;" />
+							</div>
+							<div class="project-section">
+								<h4>Sensor test tool for MediaTek wearable</h4>
+								<p class="subDetails">Skill: C, MediaTek LinkIt SDK</p>
+								<div>Developed a test tool on the MediaTek bare board for collecting the sensor data
+									from human activities.</div>
+							</div>
+							<div class="project-section">
+								<h4>Android Test on Dual OS</h4>
+								<p class="subDetails">Skill: Ubuntu Linux, Java, Android SDK, Android OS framework</p>
+								<div>Developed an Android app for testing different aspects between the Windows and
+									Android OS switches.</div>
+							</div>
+							<div class="project-section">
+								<h4>ASUS USB Charger Plus</h4>
+								<p class="subDetails">Skill: C++, WMI, Win32</p>
+								<div>Maintained the application for upgrade. Using debug tools to find any problem on
+									hardware, software or driver.</div>
+								<!-- 
+							* Handle Windows S0, S1, S2, S3 scenarios by Windows Messaging API
+							-->
+							</div>
+							<div class="project-section">
+								<h4>Photo Album</h4>
+								<p class="subDetails">Skill: C#, Windows 8 metro, C++, OpenCV</p>
+								<div>Designed and developed a WinRT app, which provides users to browse and edit photos.
+									Some interesting features in the app are 1. Photos folders in a tree structure are
+									all moved into the first level, so users can see all the photo folders at the very
+									first time. 2. Using some optimization methods and algorithm for speeding up
+									browsing through large photos set.</div>
+							</div>
+						</div>
+					</article>
+
+					<article>
+						<a href="http://www.gorilla-technology.com/" target="_blank"><img class="company"
+								src="images/gorilla.png" alt="gorilla.png" /></a>
+						<h2>Gorilla Technology Group</h2>
+						<h3>Software Engineer</h3>
+						<p class="subDetails">Oct. 2008 - Mar. 2012</p>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4>Video Surveillance System</h4>
+								<p class="subDetails">Skill: C#, WPF, MVVM, Entity Framework, Windows Form</p>
+								<div>The involved system helps clients to easily find suspicious or criminal events,
+									which contain time and location information from several videos. Clients can also
+									edit and manage data from the system.</div>
+								<ul>
+									<li>Participated in 3+ entire life cycles for software development including
+										Requirement Analysis, UE design, Functional Spec, System Analysis, Coding,
+										Fixing QA bugs and Deployment.</li>
+									<li>Added the timeline feature on an existing geographic User-Control.</li>
+									<li>Designed and developed several User-Controls, modules for data management.</li>
+								</ul>
+								<img class="project-image" src="images/CVAS.png" alt="CVAS.png" style="width: 100%;" />
+								<img class="project-image" src="images/VSS.png" alt="VSS.png" style="width: 100%;" />
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Side projects / Contributions</h1>
+				</div>
+				<div class="sectionContent">
+					<article>
+						<h2>Android App</h2>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4><a href="https://m.apkpure.com/tw/myphrase-free/com.strongcs.myphrase.free">My
+										Phrase</a></h4>
+								<p class="subDetails">Skill: java, Android SDK, SQLite, javascript</p>
+								<ul>
+									<li>MyPhrase is an English learning app to help people learn vocabulary more
+										effectively.</li>
+								</ul>
+								<img class="project-image" src="images/MyPhrase.gif" alt="MyPhrase.gif"
+									style="width: 100%;" />
+							</div>
+						</div>
+					</article>
+					<article>
+						<h2>Chrome Extension</h2>
+						<button class="collapsible">View Projects</button>
+						<div class="project-content">
+							<div class="project-section">
+								<h4><a
+										href="https://chromewebstore.google.com/detail/inpfimgciihegblkpjdecklgpplgkhme?authuser=0&hl=en-GB">Cambridge
+										Vocabulary Trainer</a></h4>
+								<p class="subDetails">Skill: javascript, Chrome Extensions API</p>
+								<ul>
+									<li>Currently, it is for quickly looking up vocabulary in Cambridge online
+										dictionary. This extension is not public yet because it has not achieved all the
+										functions I expect. However, I have been using present features for improving my
+										English.</li>
+								</ul>
+							</div>
+							<div class="project-section">
+								<h4><a
+										href="https://chromewebstore.google.com/detail/inpfimgciihegblkpjdecklgpplgkhme?authuser=0&hl=en-GB">Change
+										Content Color</a></h4>
+								<p class="subDetails">Skill: javascript, Chrome Extensions API</p>
+								<ul>
+									<li>Double clicking the interesting part on a webpage to make it warm color for
+										comfortable reading.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="sectionContent">
+					<article>
+						<h2>Github</h2>
+						<p class="n_bottom"><a href="https://github.com/Jeff-Eu"
+								target="_blank">https://github.com/Jeff-Eu</a></p>
+						<p></p>
+					</article>
+				</div>
+				<div class="sectionContent">
+					<article>
+						<h2>Stackoverflow</h2>
+						<a href="http://stackoverflow.com/users/1613961/jeff-t">
+							<img src="https://stackexchange.com/users/flair/1768684.png" width="208" height="58"
+								alt="profile for Jeff T. on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+								title="profile for Jeff T. on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+						</a>
+						<p></p>
+					</article>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Education</h1>
+				</div>
+				<div class="sectionContent">
+					<article>
+						<h2>National Cheng Kung University</h2>
+						<p class="subDetails">M.S. of Computer Science ( 2005 - 2007 )</p>
+						<!-- 					<p class="n_bottom">Analyze X-ray images in order to find some medical diagnostic parameters.</p>
+					<p class="indent">Thesis in Chinese<br/><a href="http://ir.lib.ncku.edu.tw/handle/987654321/21097?locale=en-US" target="_blank">Computer Image Assessment and Analysis for Knee X-ray Image</a></p> -->
+					</article>
+
+					<article>
+						<h2>National Cheng Kung University</h2>
+						<p class="subDetails">B.S. of Computer Science ( 2001 - 2005 )</p>
+						<p></p>
+					</article>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<section>
+				<div class="sectionTitle">
+					<h1>Certificate</h1>
+				</div>
+				<div class="sectionContent">
+					<article>
+						<h2>Toeic Grade - 800</h2>
+						<p class="n_bottom">Apr. 2011</p>
+					</article>
+					<article>
+						<h2>L3 of JLPT (Japanese-Language Proficiency Test)</h2>
+						<p class="n_bottom">Feb. 2007</p>
+					</article>
+				</div>
+				<div class="clear"></div>
+			</section>
+		</div>
+	</div>
+</body>
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var isAllExpanded = false;
+
+	function toggleAllGroups() {
+		isAllExpanded = !isAllExpanded;
+		for (var i = 0; i < coll.length; i++) {
+			var content = coll[i].nextElementSibling;
+			if (isAllExpanded) {
+				coll[i].classList.add("active");
+				content.style.maxHeight = (content.scrollHeight + 200) + "px";
+			} else {
+				coll[i].classList.remove("active");
+				content.style.maxHeight = null;
+			}
+		}
+	}
+
+	// Individual collapsible click handlers
+	for (var i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight) {
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = (content.scrollHeight + 200) + "px";
+			}
+		});
+	}
+
+	// Add double-click handler to headshot
+	document.getElementById("headshot").addEventListener("dblclick", toggleAllGroups);
+
+	// Add cursor style to show it's clickable
+	document.getElementById("headshot").style.cursor = "pointer";
+</script>
+
+</html>

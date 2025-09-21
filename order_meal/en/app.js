@@ -1,7 +1,7 @@
 /*global angular*/
 var app = angular.module('reddit-clone', ['ngRoute', 'firebase']);
 
-app.constant('fbURL', 'https://test-reddit-firebase.firebaseio.com');
+app.constant('fbURL', 'https://test-reddit-firebase.firebaseio.com' + '/orders');
 
 app.factory('Posts', function($firebase, fbURL) {
     return $firebase(new Firebase(fbURL)).$asArray();
@@ -28,24 +28,26 @@ app.controller('MainController', function($scope, $firebase, Posts, fbURL) {
     $scope.posts = Posts;
 
     $scope.savePost = function(post) {
-        if (post.name && post.description &&  post.price) {
+        if ($scope.authData && post.description &&  post.price) {
 
             Posts.$add({
-                name: post.name,
+                name: $scope.authData.twitter.username,//post.name,
                 description: post.description,
                 price: post.price,
-                votes: 0
+                votes: 0,
+                uid: $scope.authData.uid
             })
 
             post.name = "";
             post.description = "";
             post.url = "";
             post.price = "";
+            post.uid = "";
 
             alert('Order is done ! Your order is added to the list below.');
         }
         else {
-            alert('All forms should be filled before summit.')
+            alert('Besides logging in twitter, all fields should be filled before submitting data!')
         }
     }
 
@@ -55,32 +57,41 @@ app.controller('MainController', function($scope, $firebase, Posts, fbURL) {
     }
 
     $scope.deletePost = function(post) {
-        var postForDeletion = new Firebase(fbURL + '/' + post.$id);
-        postForDeletion.remove();
+
+       // for debugging
+       var d = post.uid === $scope.authData.uid;
+
+       // front-end validation
+        // if($scope.authData && post.uid === $scope.authData.uid) {
+            var postForDeletion = new Firebase(fbURL + '/' + post.$id);
+            postForDeletion.remove();
+        // }else {
+        //     alert("You can only delete your own post !");
+        // }
     }
 
-    $scope.addComment = function(post, comment) {
-        if($scope.authData){
-            var ref = new Firebase(fbURL + '/' + post.$id + '/comments');
-            var sync = $firebase(ref);
-            $scope.comments = sync.$asArray();
-            $scope.comments.$add({
-                user: $scope.authData.twitter.username,
-                text: comment.text
-            });
-        }
-        else {
-            alert('You need to be logged in before doing that!');
-        }
+    // $scope.addComment = function(post, comment) {
+    //     if($scope.authData){
+    //         var ref = new Firebase(fbURL + '/' + post.$id + '/comments');
+    //         var sync = $firebase(ref);
+    //         $scope.comments = sync.$asArray();
+    //         $scope.comments.$add({
+    //             user: $scope.authData.twitter.username,
+    //             text: comment.text
+    //         });
+    //     }
+    //     else {
+    //         alert('You need to be logged in before doing that!');
+    //     }
         
-        comment.text = "";
-    }
+    //     comment.text = "";
+    // }
 
-    $scope.removeComment = function(post, comment) {
-        var commentForDeletion = new Firebase(fbURL + '/' + post.$id + '/comments/' +
-        comment.$id);
-        commentForDeletion.remove();
-    }
+    // $scope.removeComment = function(post, comment) {
+    //     var commentForDeletion = new Firebase(fbURL + '/' + post.$id + '/comments/' +
+    //     comment.$id);
+    //     commentForDeletion.remove();
+    // }
 
     $scope.login = function() {
         var ref = new Firebase(fbURL + '/');
@@ -88,12 +99,15 @@ app.controller('MainController', function($scope, $firebase, Posts, fbURL) {
             if(error) {
                 alert('Sorry, error');
             }
-            else
-            alert('Success');
             
             $scope.authData = authData;
-        });
+        }, {
+            remember: "sessionOnly"
+      });
+
     }
+
+
 
     $scope.calculateSum = function() {
         var sum = 0;
